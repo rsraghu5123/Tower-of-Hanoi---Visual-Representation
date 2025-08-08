@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi - Code Comparison & Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗼 Tower of Hanoi - Code Comparison</h1>
+            <p>Interactive Step-by-Step Analysis & Execution</p>
+        </div>
+        
+        <div class="comparison-section">
+            <div class="code-panel">
+                <h2>📝 Code 1 (Your Solution 5)</h2>
+                <div class="code-block">
+public class Solution {
+    public static void towerOfHanoi(int n, String src, 
+                                   String helper, String dest) {
+        if(n == 1) {
+            System.out.println("transfer disk " + n + 
+                             " from " + src + " to " + dest);
+            return;
+        }
+        
+        // Transfer top n-1 from src to helper using dest
+        towerOfHanoi(n-1, src, dest, helper);
+        
+        // Transfer nth from src to dest
+        System.out.println("transfer disk " + n + 
+                         " from " + src + " to " + helper);
+        
+        // Transfer n-1 from helper to dest using src
+        towerOfHanoi(n-1, helper, src, dest);
+    }
+    
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of disks: ");
+        int n = sc.nextInt();
+        towerOfHanoi(n, "A", "B", "C");
+    }
+}
+                </div>
+            </div>
+            
+            <div class="code-panel">
+                <h2>⚡ Code 2 (Optimized Version)</h2>
+                <div class="code-block">
+public class TowerOfHanoi {
+    static int steps = 0;  // total steps tracker
+    
+    static void solveHanoi(int n, char source, 
+                          char helper, char destination) {
+        if (n == 1) {
+            steps++;
+            System.out.println("Move disk 1 from " + 
+                             source + " to " + destination);
+            return;
+        }
+        
+        // Step 1: Move n-1 disks from source to helper
+        solveHanoi(n - 1, source, destination, helper);
+        
+        // Step 2: Move nth disk from source to destination
+        steps++;
+        System.out.println("Move disk " + n + " from " + 
+                         source + " to " + destination);
+        
+        // Step 3: Move n-1 disks from helper to destination
+        solveHanoi(n - 1, helper, source, destination);
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of disks: ");
+        int n = sc.nextInt();
+        steps = 0; // Reset counter
+        solveHanoi(n, 'A', 'B', 'C');
+        System.out.println("Total steps = " + steps);
+    }
+}
+                </div>
+            </div>
+        </div>
+        
+        <div class="optimization-analysis">
+            <h2>🔍 Optimization Analysis</h2>
+            <div class="winner">
+                🏆 <strong>Winner: Code 2 (Optimized Version)</strong>
+            </div>
+            
+            <div class="pros-cons">
+                <div class="pros">
+                    <h3>✅ Code 2 Advantages</h3>
+                    <ul>
+                        <li><strong>Memory Efficient:</strong> Uses char (2 bytes) vs String objects</li>
+                        <li><strong>Performance:</strong> Faster char operations</li>
+                        <li><strong>Step Counting:</strong> Tracks total moves</li>
+                        <li><strong>Less Garbage Collection:</strong> No string concatenation overhead</li>
+                        <li><strong>Correct Logic:</strong> Proper disk movement sequence</li>
+                    </ul>
+                </div>
+                
+                <div class="cons">
+                    <h3>❌ Code 1 Issues</h3>
+                    <ul>
+                        <li><strong>Memory Overhead:</strong> String objects on heap</li>
+                        <li><strong>Logic Error:</strong> Prints wrong destination in middle step</li>
+                        <li><strong>No Step Count:</strong> Missing useful information</li>
+                        <li><strong>String Operations:</strong> Slower than char operations</li>
+                        <li><strong>Less Readable:</strong> Longer parameter names</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="execution-section">
+            <h2>🎮 Interactive Step-by-Step Execution</h2>
+            
+            <div class="controls">
+                <div style="margin-bottom: 20px;">
+                    <label for="nValue" style="font-weight: bold; margin-right: 10px; color: #2c3e50;">Number of Disks (n):</label>
+                    <input type="number" id="nValue" value="3" min="1" max="8" style="padding: 8px 12px; border-radius: 5px; border: 2px solid #3498db; font-size: 16px; width: 80px; text-align: center;">
+                    <span style="color: #7f8c8d; font-size: 14px; margin-left: 10px;">⚠️ Max (2^n-1)Steps...</span>
+                </div>
+                <button onclick="executeCode1()">Execute Code 1</button>
+                <button onclick="executeCode2()">Execute Code 2</button>
+                <button onclick="visualDemo()">Visual Demo</button>
+                <button onclick="clearOutput()">Clear Output</button>
+            </div>
+            
+            <div class="visual-hanoi" id="hanoi-visual">
+                <div class="tower">
+                    <div class="tower-name">Tower A</div>
+                    <div class="rod" id="tower-a"></div>
+                    <div class="base"></div>
+                </div>
+                
+                <div class="tower">
+                    <div class="tower-name">Tower B</div>
+                    <div class="rod" id="tower-b"></div>
+                    <div class="base"></div>
+                </div>
+                
+                <div class="tower">
+                    <div class="tower-name">Tower C</div>
+                    <div class="rod" id="tower-c"></div>
+                    <div class="base"></div>
+                </div>
+            </div>
+            
+            <div class="output-panel" id="output">
+                <div style="color: #3498db; font-weight: bold;">Ready for execution... Click a button above!</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

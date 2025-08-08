@@ -1,0 +1,41 @@
+{
+  "name": "tower-of-hanoi-comparison",
+  "version": "1.0.0",
+  "description": "Interactive Tower of Hanoi algorithm comparison and visualization tool",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'No build process needed for static site'",
+    "test": "echo 'No tests specified'",
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/tower-of-hanoi-comparison.git"
+  },
+  "keywords": [
+    "tower-of-hanoi",
+    "algorithm",
+    "visualization",
+    "recursion",
+    "javascript",
+    "java",
+    "computer-science",
+    "education",
+    "interactive",
+    "comparison"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-username/tower-of-hanoi-comparison/issues"
+  },
+  "homepage": "https://your-username.github.io/tower-of-hanoi-comparison/",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
