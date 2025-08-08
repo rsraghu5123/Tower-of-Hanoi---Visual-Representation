@@ -18,7 +18,7 @@ An interactive web application that compares two different implementations of th
 
 ## 🖥️ **Live Demo**
 
-👉 **[Try it live here!](https://your-username.github.io/tower-of-hanoi-comparison/)**
+👉 **[Try it live here!](https://rsraghu5123.github.io/tower-of-hanoi-comparison/)**
 
 ## 📸 Project Screenshots
 
