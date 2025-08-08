@@ -1,6 +1,6 @@
 # 🗼 Tower of Hanoi - Interactive Code Comparison & Visualization
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://your-username.github.io/tower-of-hanoi-comparison/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://rsraghu5123.github.io/Tower-of-Hanoi---Visual-Representation/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)](https://www.java.com/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
