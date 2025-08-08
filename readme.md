@@ -22,8 +22,13 @@ An interactive web application that compares two different implementations of th
 
 ## 📸 Project Screenshots
 
-### 🧠 Visualization Example:
-![Tower of Hanoi Screenshot](screenshots/Screenshot%202025-08-08%20124044.png)
+### 🧠 Visualization Examples:
+
+#### 🖼️ Screenshot 1
+![Tower of Hanoi - Step View](screenshots/Screenshot%202025-08-08%20124044.png)
+
+#### 🖼️ Screenshot 2
+![Tower of Hanoi - Code Comparison](screenshots/Screenshot%202025-08-08%20124213.png)
 
 
 ## 📁 **Project Structure**
