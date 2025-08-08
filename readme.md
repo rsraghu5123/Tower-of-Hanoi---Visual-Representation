@@ -20,6 +20,12 @@ An interactive web application that compares two different implementations of th
 
 👉 **[Try it live here!](https://your-username.github.io/tower-of-hanoi-comparison/)**
 
+## 📸 Project Screenshots
+
+### 🧠 Visualization Example:
+![Tower of Hanoi Screenshot](screenshots/Screenshot%202025-08-08%20124044.png)
+
+
 ## 📁 **Project Structure**
 
 ```
